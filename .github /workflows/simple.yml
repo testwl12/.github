@@ -1,0 +1,16 @@
+name: simple
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on:
+      - self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: A example step
+        run: |
+          echo Hello world!
+          sleep 15
+          echo Goodbye!
